@@ -16,7 +16,7 @@ td{padding: 5px; border: solid 1px gray;}
          <% for (int i=2; i<6; i++) {
                out.println("<td>");
                for (int j=1; j<10; j++) {%>
-		 <%out.print(i+"*"+j+"="+(i*j));%> 
+		 <%out.print(i+"x"+j+"="+(i*j));%> 
    <br> <% }
        out.println("</td>");}%>
       </tr>
@@ -24,7 +24,7 @@ td{padding: 5px; border: solid 1px gray;}
          <% for (int i=6; i<10; i++) {%>
      <td>
       	 <%for (int j=1; j<10; j++) {%>  
-         <% out.print(i+"*"+j+"="+(i*j));
+         <% out.print(i+"x"+j+"="+(i*j));
  %> <br><%
     } %>
          </td><%

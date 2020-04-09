@@ -18,7 +18,7 @@ td { padding: 5px; border: solid 1px gray; }
  out.println("<td>");
           for(int j=2;j<10;j++){
 
-             out.println(i+"*"+j+"="+(i*j));
+             out.println(i+"x"+j+"="+(i*j));
           }
  out.println("</td>");
  }

@@ -19,7 +19,7 @@ table{ border-collapse: collapse; cellpadding=0}</style>
 
           for(int j=2;j<10;j++){
 
-             out.println("<td>"+j+"*"+i+"="+(i*j));
+             out.println("<td>"+j+"x"+i+"="+(i*j));
 
           }
 
