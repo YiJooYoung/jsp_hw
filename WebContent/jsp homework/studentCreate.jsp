@@ -26,9 +26,9 @@ if (request.getMethod().equals("POST")) {
     else if (year == null || year.length() == 0)
         에러메시지 = "학년을 입력하세요";
     else {
-        User user = new User(userid, name, password1, email, department);
+        User user = new User(userid, number, name, year, department);
         session.setAttribute("user", user);
-        response.sendRedirect("register2_success.jsp");
+        response.sendRedirect("studentCreate_success.jsp");
         return;
     }    
 }
@@ -61,7 +61,7 @@ if (request.getMethod().equals("POST")) {
 </head>
 <body>
 <div class="container">
-<form action="studentCreate_success.jsp" method="post">
+<form method="post">
   <h1>학생등록</h1>
   <div>
     <label>ID</label>
