@@ -26,8 +26,8 @@ if (request.getMethod().equals("POST")) {
     else if (year == null || year.length() == 0)
         에러메시지 = "학년을 입력하세요";
     else {
-        User user = new User(userid, number, name, year, department);
-        session.setAttribute("user", user);
+        Student user = new Student(userid, number, name, year, department);
+        session.setAttribute("Student", user);
         response.sendRedirect("studentCreate_success.jsp");
         return;
     }    
