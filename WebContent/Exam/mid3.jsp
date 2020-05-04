@@ -4,32 +4,36 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>mid3</title>
 <style>
-body{font-family: 굴림체;}
-div.container{width: 600px; margin: 20px auto;}
-form div{margin-bottom: 1px;}
-input{width: 200px; padding: 4px;}
-button{padding: 0.4em 1em; margin-top: 1px;}
+div{ margin-bottom: 10px;}
+input, select{padding: 5px;}
+button{padding: 0.4em 2em;}
 </style>
 </head>
-<body>
 <%
-String number=request.getParameter("number");
-String num2[]=request.getParameterValues("num2");
-String r1 = request.getParameter("radio1");
+String s1 = request.getParameter("s1");
+if(s1 ==null)s1 = "one";
+%>
+<body>
+<%String r1 = request.getParameter("radio1");
 String one_checked = "one".equals(r1) ? "checked" : "";
 String two_checked = "two".equals(r1) ? "checked" : "";
 String three_checked = "three".equals(r1) ? "checked" : "";
 %>
-<div class="container">
-<form method="get">
+<form>
 <div class="radio">
       <label><input type="radio" name="radio1" value="one" <%= one_checked %>/>one</label>
       <label><input type="radio" name="radio1" value="two" <%= two_checked %>/>two</lable>
       <label><input type="radio" name="radio2" value="AB" <%= three_checked %>/>three</lable>
 </div>
-<input type="text" name="num2" value="one">
-<button type="submit" name="cmd" value="ok">OK</button>
+
+<div>
+
+<div>
+<button type="submit">OK</button>
 </div>
+</form>
+
 </body>
 </html>
