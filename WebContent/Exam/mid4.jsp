@@ -20,6 +20,12 @@
 String r1 = request.getParameter("radio1");
 String 남_checked = "남".equals(r1) ? "checked" : "";
 String 여_checked = "여".equals(r1) ? "checked" : "";
+String name= request.getParameter("name");
+String 에러메시지=null;
+if (name == null || name.length() == 0) 
+   에러메시지 = "회원등록 실패: 이름을 입력하세요";
+ else if (r1 == null|| r1.length()== 0)
+에러메시지="회원등록 실패: 성별을 입력하세요";
 %>
 <div class="container">
  <form method="get">
@@ -39,7 +45,23 @@ String 여_checked = "여".equals(r1) ? "checked" : "";
       <button type="submit">회원등록</button>
     </div>
   </form>
-  
+    <hr />
+     
+  <table>
+    <thead>
+      <tr>
+        <td>이름</td>
+        <td>성별</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= name %></td>
+        <td><%= r1 %></td>
+      </tr>
+      
+    </tbody>
+  </table>  
 </div>
 </body>
 </html>

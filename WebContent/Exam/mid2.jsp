@@ -26,7 +26,7 @@ String three_checked = "three".equals(r1) ? "checked" : "";
 <div class="radio">
       <label><input type="radio" name="radio1" value="one" <%= one_checked %>/>one</label>
       <label><input type="radio" name="radio1" value="two" <%= two_checked %>/>two</lable>
-      <label><input type="radio" name="radio2" value="AB" <%= three_checked %>/>three</lable>
+      <label><input type="radio" name="radio2" value="three" <%= three_checked %>/>three</lable>
 </div>
 <input type="text" name="num2" value="one">
 <button type="submit" name="cmd" value="ok">OK</button>

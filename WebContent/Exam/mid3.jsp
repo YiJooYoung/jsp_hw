@@ -29,7 +29,12 @@ String three_checked = "three".equals(r1) ? "checked" : "";
 </div>
 
 <div>
-
+<select name ="s1">
+	<option <%= "one".equals(s1) ? "selected":"" %>>one</option>
+	<option <%= "two".equals(s1) ? "selected":"" %>>two</option>
+	<option <%= "three".equals(s1) ? "selected":"" %>>three</option>
+	</select>
+	</div>
 <div>
 <button type="submit">OK</button>
 </div>

@@ -31,7 +31,7 @@ int result = dan*i;
 </table>
 <form>
 <div>
-<input type="text" name="number" value=<%="0" %>>
+<input type="text" name="number" value=<%= 0 %>>
 <button type="submit">단</button>
 </div>
 </form>
