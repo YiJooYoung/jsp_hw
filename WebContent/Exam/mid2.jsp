@@ -11,29 +11,20 @@ form div{margin-bottom: 1px;}
 input{width: 200px; padding: 4px;}
 button{padding: 0.4em 1em; margin-top: 1px;}
 </style>
-<title>mid1</title>
 </head>
-<%
-String s =request.getParameter("number");
-if(s== null) s= "0";
-int n= Integer.parseInt(s);%>
-<%
-String dan = request.getParameter("dan");
-dan = dan == null ? "1":dan;
-int dan = Integer.parseInt(dan);
-%>
 <body>
-<table border=1>
 <%
-for(int i=1; i<10; i++){
-int result = dan*i;
+String number=request.getParameter("number");
+String num2[]=request.getParameterValues("num2");
+String r1 = request.getParameter("radio1");
+String one_checked = "one".equals(r1) ? "checked" : "";
+String two_checked = "two".equals(r1) ? "checked" : "";
+String three_checked = "AB".equals(r1) ? "checked" : "";
 %>
-</table>
-<form>
-<div>
-<input type="text" name="number" value=<%="0" %>>
-<button type="submit">단</button>
+<div class="container">
+<input type="text" name="num2" value="one">
+<button type="submit" name="cmd" value="ok">OK</button>
+
 </div>
-</form>
 </body>
 </html>
