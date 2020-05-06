@@ -44,7 +44,14 @@ List<Book> list = BookDAO2.findByAuthor(srchText);
 </thead>
 <tbody>
  <% for (Book book : list) { %>
-  
+   <tr>
+   <td><%= book.getId() %></td>
+   <td><%= book.getTitle() %></td>
+   <td><%= book.getAuthor() %></td>
+   <td><%= book.getCategoryId() %></td>
+   <td><%= book.getPrice() %></td>
+   <td><%= book.getPublisher() %></td>
+   </tr>
 </table>
 
 </div>

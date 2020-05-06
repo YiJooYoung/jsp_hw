@@ -25,7 +25,7 @@ public class BookDAO {
 					book.setPrice(resultSet.getString("price"));
 					book.setPublisher(resultSet.getString("publisher"));
 					list.add(book);
-					}
+				}
 				return list;
 		}
 	}

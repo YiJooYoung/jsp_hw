@@ -37,5 +37,21 @@ public class BookDAO2 {
 	   try (Connection connection = DB.getConnection("book");
 	        PreparedStatement statement = connection.prepareStatement(sql)) {
 	       statement.setString(1, author + "%");
-
+       try (ResultSet resultSet = statement.executeQuery()) {
+	           ArrayList<Book> list = new ArrayList<Book>();
+	         while (resultSet.next()) {
+	        	Book book = new Book();
+	            book.setId(resultSet.getInt("id"));
+	            book.setTitle(resultSet.getString("title"));
+		        book.setAuthor(resultSet.getString("author"));
+		        book.setCategoryId(resultSet.getInt("categoryId"));
+		        book.setPrice(resultSet.getString("price"));
+		        book.setPublisher(resultSet.getString("publisher"));
+		        list.add(book);
+	               }
+	          return list;
+	       	}
+	   	}
+	 }
+}
 

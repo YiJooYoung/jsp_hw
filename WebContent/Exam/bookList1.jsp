@@ -29,7 +29,10 @@ td:nth-child(4) { text-align: center; }
 <tr> 
 <td><%= book.getId() %></td> 
 <td><%= book.getTitle() %></td>
-
+<td><%= book.getAuthor() %></td>
+<td><%= book.getCategoryId() %></td> 
+<td><%= book.getPrice() %></td>
+<td><%= book.getPublisher() %></td> 
 </tr> 
 <% } %> 
 </tbody> 
